@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "iot:Connect",
+      "Resource": "arn:aws:iot:us-east-1:385235753061:client/danish-garbage-bin-*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "greengrass:Discover",
+      "Resource": "arn:aws:iot:us-east-1:385235753061:thing/danish-garbage-bin-*"
+    }
+  ]
+}

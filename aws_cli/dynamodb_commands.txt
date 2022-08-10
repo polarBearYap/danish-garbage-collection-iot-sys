@@ -1,0 +1,85 @@
+# TOC
+# 1) Create table
+# 2) Check the table's status
+# 3) Insert records
+
+# 1) Create table
+aws dynamodb create-table \
+--table-name DanishGarbageBin \
+--attribute-definitions \
+    AttributeName=ThingName,AttributeType=S \
+    AttributeName=HouseNumber,AttributeType=S \
+    AttributeName=HouseArea,AttributeType=S \
+    AttributeName=FloorNumber,AttributeType=S \
+    AttributeName=FillLevel,AttributeType=N \
+    AttributeName=LastUpdated,AttributeType=S \
+    AttributeName=SerialNumber,AttributeType=S \
+    AttributeName=ManufacturingDate,AttributeType=S \
+--key-schema \
+    AttributeName=ThingName,KeyType=HASH \
+--billing-mode PAY_PER_REQUEST \
+--table-class STANDARD
+
+# 2) Check the table's status
+aws dynamodb describe-table --table-name DanishGarbageBin | grep TableStatus
+
+# 3) Insert records
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-1"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-2"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-3"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-4"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-5"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-6"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-7"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-8"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-9"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-10"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-11"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-12"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-13"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-14"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'
+
+aws dynamodb put-item \
+--table-name DanishGarbageBin \
+--item '{"ThingName": {"S": "danish-garbage-bin-15"}, "FillLevel": {"N": "0.0"}, "LastUpdated": {"S": "1647858571"}}'

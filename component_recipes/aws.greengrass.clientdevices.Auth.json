@@ -1,0 +1,421 @@
+{
+	"deviceGroups": {
+		"formatVersion": "2021-03-05",
+		"definitions": {
+			"danish-downstream-devices": {
+				"selectionRule": "thingName: danish-garbage-bin-*",
+				"policyName": "danish-garbage-bin-policy"
+			},
+			"danish-garbage-bin-dev-test": {
+				"selectionRule": "thingName: danish-garbage-bin-1",
+				"policyName": "danish-garbage-bin-dev-test-policy"
+			},
+			"danish-garbage-bin-1": {
+				"selectionRule": "thingName: danish-garbage-bin-1",
+				"policyName": "danish-garbage-bin-1-policy"
+			},
+			"danish-garbage-bin-2": {
+				"selectionRule": "thingName: danish-garbage-bin-2",
+				"policyName": "danish-garbage-bin-2-policy"
+			},
+			"danish-garbage-bin-3": {
+				"selectionRule": "thingName: danish-garbage-bin-3",
+				"policyName": "danish-garbage-bin-3-policy"
+			},
+			"danish-garbage-bin-4": {
+				"selectionRule": "thingName: danish-garbage-bin-4",
+				"policyName": "danish-garbage-bin-4-policy"
+			},
+			"danish-garbage-bin-5": {
+				"selectionRule": "thingName: danish-garbage-bin-5",
+				"policyName": "danish-garbage-bin-5-policy"
+			},
+			"danish-garbage-bin-6": {
+				"selectionRule": "thingName: danish-garbage-bin-6",
+				"policyName": "danish-garbage-bin-6-policy"
+			},
+			"danish-garbage-bin-7": {
+				"selectionRule": "thingName: danish-garbage-bin-7",
+				"policyName": "danish-garbage-bin-7-policy"
+			},
+			"danish-garbage-bin-8": {
+				"selectionRule": "thingName: danish-garbage-bin-8",
+				"policyName": "danish-garbage-bin-8-policy"
+			},
+			"danish-garbage-bin-9": {
+				"selectionRule": "thingName: danish-garbage-bin-9",
+				"policyName": "danish-garbage-bin-9-policy"
+			},
+			"danish-garbage-bin-10": {
+				"selectionRule": "thingName: danish-garbage-bin-10",
+				"policyName": "danish-garbage-bin-10-policy"
+			},
+			"danish-garbage-bin-11": {
+				"selectionRule": "thingName: danish-garbage-bin-11",
+				"policyName": "danish-garbage-bin-11-policy"
+			},
+			"danish-garbage-bin-12": {
+				"selectionRule": "thingName: danish-garbage-bin-12",
+				"policyName": "danish-garbage-bin-12-policy"
+			},
+			"danish-garbage-bin-13": {
+				"selectionRule": "thingName: danish-garbage-bin-13",
+				"policyName": "danish-garbage-bin-13-policy"
+			},
+			"danish-garbage-bin-14": {
+				"selectionRule": "thingName: danish-garbage-bin-14",
+				"policyName": "danish-garbage-bin-14-policy"
+			},
+			"danish-garbage-bin-15": {
+				"selectionRule": "thingName: danish-garbage-bin-15",
+				"policyName": "danish-garbage-bin-15-policy"
+			}
+		},
+		"policies": {
+			"danish-garbage-bin-policy": {
+				"AllowConnect": {
+					"statementDescription": "Allow client devices to connect to the Greengrass core device.",
+					"operations": [
+						"mqtt:connect"
+					],
+					"resources": [
+						"*"
+					]
+				},
+				"AllowPublish": {
+					"statementDescription": "Allow client devices to publish images to a topic to request trash type predictions from the inference component.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:command/danish-gcs/core/1/trash-classification"
+					]
+				}
+			},
+			"danish-garbage-bin-dev-test-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-1 to publish fill level telemetry on behalf of other client devices. As the name suggests, delete this policy in the production environment.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1059/floor-2/bin/2",
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1059/floor-3/bin/3",
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1060/floor-1/bin/4",
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1060/floor-2/bin/5",
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1060/floor-3/bin/6",
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1061/floor-1/bin/7",
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1061/floor-2/bin/8",
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1061/floor-3/bin/9",
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1440/floor-1/bin/10",
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1440/floor-2/bin/11",
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1440/floor-3/bin/12",
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1441/floor-1/bin/13",
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1441/floor-2/bin/14",
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1441/floor-3/bin/15"
+					]
+				}
+			},
+			"danish-garbage-bin-1-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-1 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1059/floor-1/bin/1"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-1 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-beijing/house-1059/floor-1/bin/1/res"
+					]
+				}
+			},
+			"danish-garbage-bin-2-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-2 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1059/floor-2/bin/2"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-2 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-beijing/house-1059/floor-2/bin/2/res"
+					]
+				}
+			},
+			"danish-garbage-bin-3-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-3 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1059/floor-3/bin/3"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-3 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-beijing/house-1059/floor-3/bin/3/res"
+					]
+				}
+			},
+			"danish-garbage-bin-4-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-4 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1060/floor-1/bin/4"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-4 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-beijing/house-1060/floor-1/bin/4/res"
+					]
+				}
+			},
+			"danish-garbage-bin-5-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-5 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1060/floor-2/bin/5"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-5 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-beijing/house-1060/floor-2/bin/5/res"
+					]
+				}
+			},
+			"danish-garbage-bin-6-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-6 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1060/floor-3/bin/6"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-6 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-beijing/house-1060/floor-3/bin/6/res"
+					]
+				}
+			},
+			"danish-garbage-bin-7-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-7 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1061/floor-1/bin/7"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-7 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-beijing/house-1061/floor-1/bin/7/res"
+					]
+				}
+			},
+			"danish-garbage-bin-8-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-8 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1061/floor-2/bin/8"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-8 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-beijing/house-1061/floor-2/bin/8/res"
+					]
+				}
+			},
+			"danish-garbage-bin-9-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-9 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-beijing/house-1061/floor-3/bin/9"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-9 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-beijing/house-1061/floor-3/bin/9/res"
+					]
+				}
+			},
+			"danish-garbage-bin-10-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-10 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1440/floor-1/bin/10"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-10 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-manchester/house-1440/floor-1/bin/10/res"
+					]
+				}
+			},
+			"danish-garbage-bin-11-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-11 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1440/floor-2/bin/11"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-11 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-manchester/house-1440/floor-2/bin/11/res"
+					]
+				}
+			},
+			"danish-garbage-bin-12-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-12 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1440/floor-3/bin/12"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-12 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-manchester/house-1440/floor-3/bin/12/res"
+					]
+				}
+			},
+			"danish-garbage-bin-13-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-13 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1441/floor-1/bin/13"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-13 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-manchester/house-1441/floor-1/bin/13/res"
+					]
+				}
+			},
+			"danish-garbage-bin-14-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-14 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1441/floor-2/bin/14"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-14 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-manchester/house-1441/floor-2/bin/14/res"
+					]
+				}
+			},
+			"danish-garbage-bin-15-policy": {
+				"AllowPublish": {
+					"statementDescription": "Allow danish-garbage-bin-15 to publish fill level telemetry to the topic to be sent to various AWS cloud destinations.",
+					"operations": [
+						"mqtt:publish"
+					],
+					"resources": [
+						"mqtt:topic:data/danish-gcs/area-manchester/house-1441/floor-3/bin/15"
+					]
+				},
+				"AllowSubscribe": {
+					"statementDescription": "Allow danish-garbage-bin-15 to subscribe to its own topic to receive predicted trash type.",
+					"operations": [
+						"mqtt:subscribe"
+					],
+					"resources": [
+						"mqtt:topicfilter:command/danish-gcs/area-manchester/house-1441/floor-3/bin/15/res"
+					]
+				}
+			}
+		}
+	}
+}

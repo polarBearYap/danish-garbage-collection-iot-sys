@@ -1,0 +1,64 @@
+{
+	"RecipeFormatVersion": "2020-01-25",
+	"ComponentName": "danish.GCS.DLRInstallation",
+	"ComponentVersion": "1.0.0",
+	"ComponentType": "aws.greengrass.generic",
+	"ComponentDescription": "Run a script that installs Deep Learning Runtime (DLR) and its dependencies in a virtual environment on the core device.",
+	"ComponentPublisher": "Yap Jheng Khin",
+	"ComponentConfiguration": {
+		"DefaultConfiguration": {
+			"MLRootPath": "../danish.GCS.DLRInstallation/greengrass_ml",
+			"WindowsMLRootPath": "%cd%\\..\\danish.GCS.DLRInstallation\\greengrass_ml",
+			"UseInstaller": "true"
+		}
+	},
+	"ComponentDependencies": {
+		"aws.greengrass.Nucleus": {
+			"VersionRequirement": ">=2.0.0 <2.6.0",
+			"DependencyType": "SOFT"
+		}
+	},
+	"Manifests": [
+		{
+			"Platform": {
+				"os": "linux",
+				"architecture": "amd64"
+			},
+			"Lifecycle": {
+				"bootstrap": {
+					"RequiresPrivilege": "true",
+					"Setenv": {
+						"LANGUAGE": "en_US.UTF-8",
+						"LC_ALL": "en_US.UTF-8",
+						"LANG": "en_US.UTF-8"
+					},
+					"script": "\n                                    bash {artifacts:decompressedPath}/model-dependencies-installer/installer.sh -p {configuration:/MLRootPath} -e {artifacts:path}/environment.yaml -i {configuration:/UseInstaller}",
+					"timeout": "900"
+				}
+			},
+			"Artifacts": [
+				{
+					"Uri": "s3://danish-gcs-model-artifacts-bucket/v1/variant.DLR.artifacts/model-dependencies-installer.zip",
+					"Digest": "YNI8l4zlkq1xiPnrD135wM3y8NmtPpBVYTtCwo1rFfM=",
+					"Algorithm": "SHA-256",
+					"Unarchive": "ZIP",
+					"Permission": {
+						"Read": "OWNER",
+						"Execute": "NONE"
+					}
+				},
+				{
+					"Uri": "s3://danish-gcs-model-artifacts-bucket/v1/variant.DLR.artifacts/environment.yaml",
+					"Digest": "7JN3XgUvCDWrFWI7UePqqbQnQD8INv8Cg1zwJKUdoEk=",
+					"Algorithm": "SHA-256",
+					"Unarchive": "NONE",
+					"Permission": {
+						"Read": "OWNER",
+						"Execute": "NONE"
+					}
+				}
+			]
+		}
+	],
+	"Lifecycle": {}
+}

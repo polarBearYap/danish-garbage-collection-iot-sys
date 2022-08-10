@@ -1,0 +1,15 @@
+data/danish-gcs/area-beijing/house-1059/floor-1/bin/1
+data/danish-gcs/area-beijing/house-1059/floor-2/bin/2
+data/danish-gcs/area-beijing/house-1059/floor-3/bin/3
+data/danish-gcs/area-beijing/house-1060/floor-1/bin/4
+data/danish-gcs/area-beijing/house-1060/floor-2/bin/5
+data/danish-gcs/area-beijing/house-1060/floor-3/bin/6
+data/danish-gcs/area-beijing/house-1061/floor-1/bin/7
+data/danish-gcs/area-beijing/house-1061/floor-2/bin/8
+data/danish-gcs/area-beijing/house-1061/floor-3/bin/9
+data/danish-gcs/area-manchester/house-1440/floor-1/bin/10
+data/danish-gcs/area-manchester/house-1440/floor-2/bin/11
+data/danish-gcs/area-manchester/house-1440/floor-3/bin/12
+data/danish-gcs/area-manchester/house-1441/floor-1/bin/13
+data/danish-gcs/area-manchester/house-1441/floor-2/bin/14
+data/danish-gcs/area-manchester/house-1441/floor-3/bin/15

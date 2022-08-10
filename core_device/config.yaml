@@ -1,0 +1,15 @@
+system:
+  certificateFilePath: "~/greengrass/v2/danish-gcs-core-1.pem.crt"
+  privateKeyPath: "~/greengrass/v2/danish-gcs-core-1.pem.key"
+  rootCaPath: "~/greengrass/v2/AmazonRootCA1.pem"
+  rootpath: "~/greengrass/v2"
+  thingName: "danish-gcs-core-1"
+services:
+  aws.greengrass.Nucleus:
+    componentType: "NUCLEUS"
+    version: "2.5.3"
+    configuration:
+      awsRegion: "us-east-1"
+      iotRoleAlias: "DanishGBSGreengrassCoreTokenExchangeRole"
+      iotDataEndpoint: "a3er755buxo6a7-ats.iot.us-east-1.amazonaws.com"
+      iotCredEndpoint: "c35gguwycnm6pv.credentials.iot.us-east-1.amazonaws.com"

@@ -1,0 +1,53 @@
+[INFO] [2022-03-21T22:02:06Z] [root] Performing greengrass discovery...
+[INFO] [2022-03-21T14:02:06Z] [00007fcfdd36b740] [event-loop] - id=0xc4b080: Initializing edge-triggered epoll
+[INFO] [2022-03-21T14:02:06Z] [00007fcfdd36b740] [event-loop] - id=0xc4b080: Starting event-loop thread.
+[INFO] [2022-03-21T14:02:06Z] [00007fcfdd36b740] [dns] - id=0xb704e0: Initializing default host resolver with 16 max host entries.
+[INFO] [2022-03-21T14:02:06Z] [00007fcfdd36b740] [channel-bootstrap] - id=0xc8f2b0: Initializing client bootstrap with event-loop group 0xc93f80
+[INFO] [2022-03-21T14:02:06Z] [00007fcfd95ab700] [event-loop] - id=0xc4b080: main loop started
+[INFO] [2022-03-21T14:02:06Z] [00007fcfd95ab700] [event-loop] - id=0xc4b080: default timeout 100000, and max events to process per tick 100
+[ERROR] [2022-03-21T14:02:06Z] [00007fcfd95ab700] [socket] - id=0x7fcfd4000e50 fd=8: connect failed with error code 101.
+[INFO] [2022-03-21T14:02:06Z] [00007fcfd95ab700] [dns] - id=0xb704e0: recording failure for record 2406:da00:ff00::3655:9f6a for greengrass-ats.iot.us-east-1.amazonaws.com, moving to bad list
+[ERROR] [2022-03-21T14:02:06Z] [00007fcfd95ab700] [channel-bootstrap] - id=0xc8f2b0: failed to create socket with error 1049
+[INFO] [2022-03-21T14:02:07Z] [00007fcfd95ab700] [socket] - id=0x7fcfd4000e50 fd=8: connection success
+[WARN] [2022-03-21T14:02:08Z] [00007fcfd95ab700] [http-connection] - static: Unrecognized ALPN protocol. Assuming HTTP/1.1
+[INFO] [2022-03-21T14:02:08Z] [00007fcfd95ab700] [http-connection] - id=0x7fcfd4016440: HTTP/1.1 client connection established.
+[INFO] [2022-03-21T22:02:09Z] [root] Trying core arn:aws:iot:us-east-1:385235753061:thing/danish-gcs-core-1 at host 192.168.56.253 port 8883
+[INFO] [2022-03-21T14:02:09Z] [00007fcfd95ab700] [http-connection] - 0x7fcfd4016440: Client shutdown completed with error 0 (AWS_ERROR_SUCCESS).
+[INFO] [2022-03-21T14:02:09Z] [00007fcfdd36b740] [mqtt-client] - id=0xde7180: using ping timeout of 3000000000 ns
+[INFO] [2022-03-21T14:02:09Z] [00007fcfd95ab700] [socket] - id=0x7fcfd4000e50 fd=8: connection success
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully connected to IoT endpoint
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-beijing/house-1059/floor-1/bin/1 on behalf of danish-garbage-bin-1...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-beijing/house-1059/floor-1/bin/1 on behalf of danish-garbage-bin-1
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-beijing/house-1059/floor-2/bin/2 on behalf of danish-garbage-bin-2...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-beijing/house-1059/floor-2/bin/2 on behalf of danish-garbage-bin-2
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-beijing/house-1059/floor-3/bin/3 on behalf of danish-garbage-bin-3...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-beijing/house-1059/floor-3/bin/3 on behalf of danish-garbage-bin-3
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-beijing/house-1060/floor-1/bin/4 on behalf of danish-garbage-bin-4...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-beijing/house-1060/floor-1/bin/4 on behalf of danish-garbage-bin-4
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-beijing/house-1060/floor-2/bin/5 on behalf of danish-garbage-bin-5...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-beijing/house-1060/floor-2/bin/5 on behalf of danish-garbage-bin-5
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-beijing/house-1060/floor-3/bin/6 on behalf of danish-garbage-bin-6...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-beijing/house-1060/floor-3/bin/6 on behalf of danish-garbage-bin-6
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-beijing/house-1061/floor-1/bin/7 on behalf of danish-garbage-bin-7...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-beijing/house-1061/floor-1/bin/7 on behalf of danish-garbage-bin-7
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-beijing/house-1061/floor-2/bin/8 on behalf of danish-garbage-bin-8...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-beijing/house-1061/floor-2/bin/8 on behalf of danish-garbage-bin-8
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-beijing/house-1061/floor-3/bin/9 on behalf of danish-garbage-bin-9...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-beijing/house-1061/floor-3/bin/9 on behalf of danish-garbage-bin-9
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-manchester/house-1440/floor-1/bin/10 on behalf of danish-garbage-bin-10...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-manchester/house-1440/floor-1/bin/10 on behalf of danish-garbage-bin-10
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-manchester/house-1440/floor-2/bin/11 on behalf of danish-garbage-bin-11...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-manchester/house-1440/floor-2/bin/11 on behalf of danish-garbage-bin-11
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-manchester/house-1440/floor-3/bin/12 on behalf of danish-garbage-bin-12...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-manchester/house-1440/floor-3/bin/12 on behalf of danish-garbage-bin-12
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-manchester/house-1441/floor-1/bin/13 on behalf of danish-garbage-bin-13...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-manchester/house-1441/floor-1/bin/13 on behalf of danish-garbage-bin-13
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-manchester/house-1441/floor-2/bin/14 on behalf of danish-garbage-bin-14...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-manchester/house-1441/floor-2/bin/14 on behalf of danish-garbage-bin-14
+[INFO] [2022-03-21T22:02:12Z] [root] Publishing telemetry to data/danish-gcs/area-manchester/house-1441/floor-3/bin/15 on behalf of danish-garbage-bin-15...
+[INFO] [2022-03-21T22:02:12Z] [root] Successfully publish all messages (qos: 1) to the topic data/danish-gcs/area-manchester/house-1441/floor-3/bin/15 on behalf of danish-garbage-bin-15
+[INFO] [2022-03-21T22:02:12Z] [root] Trying to disconnecting from MQTT broker in the core device
+[INFO] [2022-03-21T14:02:12Z] [00007fcfd95ab700] [mqtt-client] - id=0xde7180: sending disconnect message as part of graceful shutdown.
+[INFO] [2022-03-21T22:02:12Z] [root] Disconnection successful. Program exits.
+[ERROR] [2022-03-21T14:02:12Z] [00007fcfdd36b740] [mqtt-client] - id=0xde7180: Connection is not open, and may not be closed
+

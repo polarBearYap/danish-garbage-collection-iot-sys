@@ -1,0 +1,70 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "iot:Connect",
+      "Resource": "arn:aws:iot:us-east-1:385235753061:client/danish-gcs-core-*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Receive",
+        "iot:Publish"
+      ],
+      "Resource": [
+        "arn:aws:iot:us-east-1:385235753061:topic/$aws/things/danish-gcs-core-*/greengrass/health/json",
+        "arn:aws:iot:us-east-1:385235753061:topic/$aws/things/danish-gcs-core-*/greengrassv2/health/json",
+        "arn:aws:iot:us-east-1:385235753061:topic/$aws/things/danish-gcs-core-*/jobs/*",
+        "arn:aws:iot:us-east-1:385235753061:topic/$aws/things/danish-gcs-core-*/shadow/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Publish",
+      "Resource": [
+        "arn:aws:iot:us-east-1:385235753061:topic/$aws/things/danish-gcs-core-*/greengrass/health/json",
+        "arn:aws:iot:us-east-1:385235753061:topic/data/danish-gcs/area-*/house-*/floor-*/bin/*",
+        "arn:aws:iot:us-east-1:385235753061:topic/ml/dlr/danish-gcs/core-*/trash-classification"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": [
+        "arn:aws:iot:us-east-1:385235753061:topicfilter/$aws/things/danish-gcs-core-*/jobs/*",
+        "arn:aws:iot:us-east-1:385235753061:topicfilter/$aws/things/danish-gcs-core-*/shadow/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:AssumeRoleWithCertificate",
+      "Resource": "arn:aws:iot:us-east-1:385235753061:rolealias/DanishGBSGreengrassCoreTokenExchangeRole"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "greengrass:GetComponentVersionArtifact",
+        "greengrass:ResolveComponentCandidates",
+        "greengrass:GetDeploymentConfiguration",
+        "greengrass:PutCertificateAuthorities",
+        "greengrass:VerifyClientDeviceIdentity"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "greengrass:VerifyClientDeviceIoTCertificateAssociation",
+      "Resource": "arn:aws:iot:us-east-1:385235753061:thing/danish-garbage-bin*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "greengrass:GetConnectivityInfo",
+        "greengrass:UpdateConnectivityInfo",
+        "greengrass:ListThingGroupsForCoreDevice"
+      ],
+      "Resource": "arn:aws:iot:us-east-1:385235753061:thing/danish-gcs-core-*"
+    }
+  ]
+}

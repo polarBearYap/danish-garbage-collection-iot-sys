@@ -1,0 +1,88 @@
+{
+    "Parameters": {
+        "ThingName": {
+            "Type": "String"
+        },
+        "SerialNumber": {
+            "Type": "String"
+        },
+        "ManufacturingDate": {
+            "Type": "String"
+        },
+        "OrganizationalUnit": {
+            "Type": "String",
+            "Default" : "Danish house"
+        },
+        "Country": {
+            "Type": "String",
+            "Default" : "Malaysia"
+        },
+        "FloorNumber": {
+            "Type": "String"
+        },
+        "HouseNumber": {
+            "Type": "String"
+        },
+        "HouseArea": {
+            "Type": "String"
+        },
+        "DeviceCertificateId": {
+            "Type": "String"
+        },
+        "Version": {
+            "Type": "String",
+            "Default" : "v1"
+        }
+    },
+    "Resources": {
+        "thing": {
+            "Type": "AWS::IoT::Thing",
+            "Properties": {
+                "ThingName": {
+                    "Ref": "ThingName"
+                },
+                "ThingTypeName": "danish-garbage-bin",
+                "AttributePayload": {
+                    "version": {
+                        "Ref": "Version"
+                    },
+                    "serialNumber": {
+                        "Ref": "SerialNumber"
+                    },
+                    "floor": {
+                        "Ref": "FloorNumber"
+                    },
+                    "house": {
+                        "Ref": "HouseNumber"
+                    },
+                    "area": {
+                        "Ref": "HouseArea"
+                    },
+                    "manufacturing_day": {
+                        "Ref": "ManufacturingDate"
+                    }
+                }
+            },
+            "OverrideSettings": {
+                "AttributePayload": "MERGE",
+                "ThingTypeName": "REPLACE",
+                "ThingGroups": "DO_NOTHING"
+            }
+        },
+        "certificate" : {
+            "Type" : "AWS::IoT::Certificate",
+            "Properties" : {
+                "CertificateId": {"Ref" : "DeviceCertificateId"}
+            },
+            "OverrideSettings": {
+                "Status": "DO_NOTHING"
+            }
+        },
+        "policy": {
+            "Type": "AWS::IoT::Policy",
+            "Properties": {
+                "PolicyName": "DanishGCSBinThingPolicy"
+            }
+        }
+    }
+}

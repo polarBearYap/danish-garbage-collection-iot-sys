@@ -1,0 +1,26 @@
+# Inference component
+python3 ./pub_sub_to_core_device.py \
+--thing-name "danish-garbage-bin-1" \
+--dev-cert  ./Device_Certs/binCert1.pem.crt \
+--dev-key   ./Device_Certs/binCert1.key \
+--root-ca   ./CA_Cert/AmazonRootCA1.pem \
+--pub-topic "command/danish-gcs/core/1/trash-classification" \
+--sub-topic "command/danish-gcs/area-beijing/house-1059/floor-1/bin/1/res" \
+--mode      "both" \
+--seq-no    1 \
+--qos       "at_least_once" \
+--sub-count 12 \
+--messages ./inference_req_payload.json \
+--verbosity "info"
+
+# Data ingestion component
+python3 ./pub_telemetry_to_core.py \
+--thing-name   "danish-garbage-bin-1" \
+--dev-cert     "./Device_Certs/binCert1.pem.crt" \
+--dev-key      "./Device_Certs/binCert1.key" \
+--root-ca      "./CA_Cert/AmazonRootCA1.pem" \
+--pub-topics   "./pub_telemetry_topics.txt" \
+--message-path "./Telemetry" \
+--qos          "at_least_once" \
+--verbosity    "info"
+

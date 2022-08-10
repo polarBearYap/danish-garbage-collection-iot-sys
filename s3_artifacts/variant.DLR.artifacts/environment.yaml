@@ -1,0 +1,12 @@
+name: greengrass_ml_dlr_conda
+channels:
+  - defaults
+dependencies:
+  - pip
+  - numpy
+  - opencv
+  - pip:
+    - Pillow>=8.4.0
+    - scipy>=1.5.4
+    - awsiotsdk>=1.9.2
+    - stream-manager>=1.1.1
