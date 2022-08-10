@@ -1,5 +1,7 @@
 # Danish Garbage Collection IoT System
 
+<p align="justify">Below summarizes the important aspects of the IoT system. Download and refer to the <a href="https://github.com/polarBearYap/danish-garbage-collection-iot-sys/blob/main/pdf_documents/DCS_T8_G35_Report.pdf">report</a> and the <a href="https://github.com/polarBearYap/danish-garbage-collection-iot-sys/blob/main/pdf_documents/DCS_202201_T8_G35_Manual.pdf">manual</a> for the full details.</p>
+
 ## Table of contents
 - [Overview](#overview)
 - [Features](#features)
