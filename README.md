@@ -39,14 +39,20 @@
 | component_recipes | Contain recipes of the components that needed to be configured during deployment |
 | core_device | Contain files that are used when installing Greengrass Core software, should place in core device's VM |
 | logs | Contain sample log files of a successful Greengrass custom component's deployment |
-| picture | Contain the architecture diagram of the IoT system |
+| picture | Contain the architecture diagram of the IoT system and some report screenshots |
 | s3_artifacts | Contain files that should be upload to S3 bucket named danish-gcs-model-artifacts-bucket |
 | s3_output_files | Contain sample files that are downloaded from the S3 bucket named danish-gcs-image-and-model-output-bucket |
 | technical_manual | Contain the technical manual to implement the IoT system in the AWS cloud |
 
 ## Technical Contribution
 
-The manual also contains developer guide on how to develop a custom Greengrass component from a local virtual machine.
+1. As shown in the image below, the manual contains developer guide on how to develop a custom Greengrass component from a local virtual machine.
+
+<img alt="Developer guide on developing custom Greengrass component" src="./picture/manual-guide-1.png" width="500">
+
+2. As shown in the image below, the manual also describes the best MQTT design patterns recommended by [AWS](https://docs.aws.amazon.com/whitepapers/latest/designing-mqtt-topics-aws-iot-core/designing-mqtt-topics-aws-iot-core.html). 
+
+<img alt="Developer guide on the MQTT best practices" src="./picture/manual-guide-2.png" width="500">
 
 ## Acknowledgement
 Special thanks to Dr Cheng for providing free online introductory AWS course and 50% discount on AWS foundational certificate. Also, I would like to thank Dr Ashvaany for patiently guiding the assignment.
