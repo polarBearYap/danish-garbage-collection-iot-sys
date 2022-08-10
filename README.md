@@ -1,17 +1,22 @@
-# danish-garbage-collection-iot-sys
+# Danish Garbage Collection IoT System
 
 ## Table of contents
 - [Overview](#overview)
 - [Architecture diagram](#architecture-diagram)
+- [Project demo](#project-demo)
 - [Contributors](#contributors)
 - [File structure](#file-structure)
 - [Technical contribution](#technical-contribution)
+- [Acknowledgement](#acknowledgement)
+- [Potential improvement](#potential-improvement)
 
 ## Overview
 <p align="justify">The garbage collection system is inefficient in Danish House Student Hostel (which is located in UTAR Kampar campus). Each garbage bin only picked up by employees once per week even though the bin is already full for a few days. Most students are forced to put the trash outside of the garbage bins since the  bins are always full. As a result, the area becomes a breeding ground for pests like cockroach and Aedes. Numerous maggots crawl around the bin, dead cockroaches can be found everywhere in the stairway, surgical masks get thrown outside of bin and flown away... This inevitably will cause health problems to the students.</p>
 
 ## Architecture diagram
 <p align="justify">The main AWS services used are  AWS IoT Greengrass. Two Ubuntu VirtualBox VMs are set up to represent the edge device and one of the IoT garbage bin, respectively.</p>
+
+> Click on the image to enlarge. 
 
 ![Architecture diagram of garbage collection IoT system](./picture/architecture-diagram.png)
 
@@ -41,4 +46,12 @@
 
 ## Technical Contribution
 
-The manual also contains developer guide on how to develop a custom Greengrass component from a local virtual machine.   
+The manual also contains developer guide on how to develop a custom Greengrass component from a local virtual machine.
+
+## Acknowledgement
+Special thanks to Dr Cheng for providing free online introductory AWS course and 50% discount on AWS foundational certificate. Also, I would like to thank Dr Ashvaany for patiently guiding the assignment.
+1. Ts Dr Cheng Wai Khuen
+2. Dr Ashvaany a/p Egambaram
+
+## Potential improvement
+
