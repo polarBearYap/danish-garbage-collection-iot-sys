@@ -4,7 +4,7 @@
 - [Overview](#overview)
 - [Architecture diagram](#architecture-diagram)
 - [Project demo](#project-demo)
-- [Contributors](#contributors)
+- [Project contributors](#project-contributors)
 - [File structure](#file-structure)
 - [Technical contribution](#technical-contribution)
 - [Acknowledgement](#acknowledgement)
@@ -22,13 +22,6 @@
 
 ## Project Demo
 
-
-## Contributors
-1. Yap Jheng Khin (Leader)
-2. Gan Win Sian (Co-leader)
-3. Cheow Yue Chen
-4. Kesavan a/l Muniandy
-
 ## File structure 
 
 | Directory | Description |
@@ -39,10 +32,11 @@
 | component_recipes | Contain recipes of the components that needed to be configured during deployment |
 | core_device | Contain files that are used when installing Greengrass Core software, should place in core device's VM |
 | logs | Contain sample log files of a successful Greengrass custom component's deployment |
+| pdf_documents | Contain the assignment report and the step-by-step guide to set up the system |
 | picture | Contain the architecture diagram of the IoT system and some report screenshots |
 | s3_artifacts | Contain files that should be upload to S3 bucket named danish-gcs-model-artifacts-bucket |
 | s3_output_files | Contain sample files that are downloaded from the S3 bucket named danish-gcs-image-and-model-output-bucket |
-| technical_manual | Contain the technical manual to implement the IoT system in the AWS cloud |
+
 
 ## Technical Contribution
 
@@ -54,10 +48,17 @@
 
 <img alt="Developer guide on the MQTT best practices" src="./picture/manual-guide-2.png" width="500">
 
+## Project contributors
+1. Yap Jheng Khin (Leader)
+2. Gan Win Sian (Co-leader)
+3. Cheow Yue Chen
+4. Kesavan a/l Muniandy
+
 ## Acknowledgement
 Special thanks to Dr Cheng for providing free online introductory AWS course and 50% discount on AWS foundational certificate. Also, I would like to thank Dr Ashvaany for patiently guiding the assignment.
 1. Ts Dr Cheng Wai Khuen
 2. Dr Ashvaany a/p Egambaram
 
 ## Potential improvement
-
+1. Infrastructure as a code (IaaC): Use [Terraform](https://www.terraform.io/) and [Ansible](https://www.ansible.com/) to automate cloud deployment.
+2. Kubernetes: Deploy a lighweight Kubernetes distribution like [K3s](https://k3s.io/) into the edge device and let the Kubernetes controllers automate tasks like failure recovery and scaling.
