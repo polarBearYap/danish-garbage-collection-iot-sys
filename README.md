@@ -4,9 +4,9 @@
 - [Overview](#overview)
 - [Architecture diagram](#architecture-diagram)
 - [Project demo](#project-demo)
-- [Project contributors](#project-contributors)
 - [File structure](#file-structure)
 - [Technical contribution](#technical-contribution)
+- [Project contributors](#project-contributors)
 - [Acknowledgement](#acknowledgement)
 - [Potential improvement](#potential-improvement)
 
@@ -61,4 +61,5 @@ Special thanks to Dr Cheng for providing free online introductory AWS course and
 
 ## Potential improvement
 1. Infrastructure as a code (IaaC): Use [Terraform](https://www.terraform.io/) and [Ansible](https://www.ansible.com/) to automate cloud deployment.
-2. Kubernetes: Deploy a lighweight Kubernetes distribution like [K3s](https://k3s.io/) into the edge device and let the Kubernetes controllers automate tasks like failure recovery and scaling.
+2. Containerize the application by [configuring the Greengrass component to run Docker container](https://docs.aws.amazon.com/greengrass/v2/developerguide/run-docker-container.html) to leverage the benefits of containers.
+3. Kubernetes: Deploy a lighweight Kubernetes distribution like [K3s](https://k3s.io/) into the edge device and let the Kubernetes controllers automate tasks like failure recovery and scaling.
