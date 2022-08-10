@@ -14,7 +14,7 @@
 <p align="justify">The garbage collection system is inefficient in Danish House Student Hostel (which is located in UTAR Kampar campus). Each garbage bin only picked up by employees once per week even though the bin is already full for a few days. Most students are forced to put the trash outside of the garbage bins since the  bins are always full. As a result, the area becomes a breeding ground for pests like cockroach and Aedes. Numerous maggots crawl around the bin, dead cockroaches can be found everywhere in the stairway, surgical masks get thrown outside of bin and flown away... This inevitably will cause health problems to the students.</p>
 
 ## Architecture diagram
-<p align="justify">The main AWS services used are  AWS IoT Greengrass. Two Ubuntu VirtualBox VMs are set up to represent the edge device and one of the IoT garbage bin, respectively.</p>
+<p align="justify">The main AWS services used are  AWS IoT Greengrass. Two Ubuntu VirtualBox VMs are set up to represent the edge device and one of the IoT garbage bins, respectively.</p>
 
 > Click on the image to enlarge. 
 
@@ -42,11 +42,11 @@
 
 ## Technical Contribution
 
-1. As shown in the image below, the manual contains developer guide on how to develop a custom Greengrass component from a local virtual machine.
+1. As shown in the image below, the manual contains the developer guide on how to develop a custom Greengrass component from a local virtual machine. 
 
 <img alt="Developer guide on developing custom Greengrass component" src="./picture/manual-guide-1.png" width="500">
 
-2. As shown in the image below, the manual also describes the best MQTT design patterns recommended by [AWS](https://docs.aws.amazon.com/whitepapers/latest/designing-mqtt-topics-aws-iot-core/designing-mqtt-topics-aws-iot-core.html). 
+2. As shown in the image below, the manual also describes the best MQTT design patterns as recommended by [AWS](https://docs.aws.amazon.com/whitepapers/latest/designing-mqtt-topics-aws-iot-core/designing-mqtt-topics-aws-iot-core.html). 
 
 <img alt="Developer guide on the MQTT best practices" src="./picture/manual-guide-2.png" width="500">
 
@@ -62,6 +62,6 @@ Special thanks to Dr Cheng for providing free online introductory AWS course and
 2. Dr Ashvaany a/p Egambaram
 
 ## Potential improvement
-1. Infrastructure as a code (IaaC): Use [Terraform](https://www.terraform.io/) and [Ansible](https://www.ansible.com/) to automate cloud deployment.
+1. Infrastructure as a code (IaaC): Use [Terraform](https://www.terraform.io/) and [Ansible](https://www.ansible.com/) to automate the AWS cloud deployment.
 2. Containerize the application by [configuring the Greengrass component to run Docker container](https://docs.aws.amazon.com/greengrass/v2/developerguide/run-docker-container.html) to leverage the benefits of containers.
 3. Kubernetes: Deploy a lighweight Kubernetes distribution like [K3s](https://k3s.io/) into the edge device and let the Kubernetes controllers automate tasks like failure recovery and scaling.
