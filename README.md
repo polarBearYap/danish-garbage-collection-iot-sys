@@ -12,6 +12,7 @@
 - [Project contributors](#project-contributors)
 - [Acknowledgement](#acknowledgement)
 - [Potential improvement](#potential-improvement)
+- [Plagiarism check](#plagiarism-check)
 
 ## Overview
 <p align="justify">The garbage collection system is inefficient in Danish House Student Hostel (which is located in UTAR Kampar campus). Each garbage bin only picked up by employees once per week even though the bin is already full for a few days. Most students are forced to put the trash outside of the garbage bins since the  bins are always full. As a result, the area becomes a breeding ground for pests like cockroach and Aedes. Numerous maggots crawl around the bin, dead cockroaches can be found everywhere in the stairway, surgical masks get thrown outside of bin and flown away... This inevitably will cause health problems to the students.</p>
@@ -76,3 +77,13 @@ Special thanks to Dr Cheng for providing free online introductory AWS course and
 1. Infrastructure as a code (IaaC): Use [Terraform](https://www.terraform.io/) and [Ansible](https://www.ansible.com/) to automate the AWS cloud deployment.
 2. Containerize the application by [configuring the Greengrass component to run Docker container](https://docs.aws.amazon.com/greengrass/v2/developerguide/run-docker-container.html) to leverage the benefits of containers.
 3. Kubernetes: Deploy a lighweight Kubernetes distribution like [K3s](https://k3s.io/) into the edge device and let the Kubernetes controllers automate tasks like failure recovery and scaling.
+
+## Plagiarism check
+
+1. The image below shows the plagiarism result of the report. The full result can be found at [here](./pdf_documents/DCS_T8_G35_Report_Plagiarism_Check.pdf). 
+
+<img alt="Plagiarism result of the report" src="./picture/report-plagiarism-check.png" width="500">
+
+2. The image below shows the plagiarism result of the manual. The full result ccan found at [here](./pdf_documents/DCS_T8_G35_Manual_Plagiarism_Check.pdf).
+
+<img alt="Plagiarism result of the manual" src="./picture/manual-plagiarism-check.png" width="500">
