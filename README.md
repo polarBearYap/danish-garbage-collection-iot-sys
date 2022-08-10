@@ -21,6 +21,8 @@
 ![Architecture diagram of garbage collection IoT system](./picture/architecture-diagram.png)
 
 ## Project Demo
+1. This [video](https://drive.google.com/file/d/1TU0DOtnLf_ZGE4_ZxR7VjM9j-9bCatRP/view?usp=sharing) contains and the demo section of the project in SD quality.
+2. This [video](https://www.youtube.com/watch?v=oVDfd2V8ZWI) contains only the demo section of the project in HD quality.
 
 ## File structure 
 
